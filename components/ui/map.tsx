@@ -70,12 +70,16 @@ const statusLabels: Record<Rider["status"], string> = {
   "en-route": "En Route",
   idle: "Idle",
   charging: "Charging",
+  inactive: "Inactive",
+  "technical-issue": "Technical Issue",
 };
 
-const statusVariants: Record<Rider["status"], "default" | "secondary" | "outline"> = {
+const statusVariants: Record<Rider["status"], "default" | "secondary" | "outline" | "destructive"> = {
   "en-route": "default",
   idle: "secondary",
   charging: "outline",
+  inactive: "secondary",
+  "technical-issue": "destructive",
 };
 
 function RiderPopup({ rider }: { rider: Rider }) {
