@@ -122,12 +122,12 @@ export const riders: Rider[] = [
   {
     id: "rider-11",
     name: "Ngozi Emenike",
-    longitude: 3.4350,
-    latitude: 6.4710,
+    longitude: 3.4550,
+    latitude: 6.4350,
     status: "en-route",
     routeHistory: [
-      [3.4280, 6.4650],
-      [3.4350, 6.4710],
+      [3.4480, 6.4290],
+      [3.4550, 6.4350],
     ],
   },
   {
@@ -200,22 +200,22 @@ export const riders: Rider[] = [
     id: "rider-18",
     name: "Obinna Eze",
     longitude: 3.3850,
-    latitude: 6.5020,
+    latitude: 6.5250,
     status: "en-route",
     routeHistory: [
-      [3.3780, 6.4960],
-      [3.3850, 6.5020],
+      [3.3780, 6.5190],
+      [3.3850, 6.5250],
     ],
   },
   {
     id: "rider-19",
     name: "Tolulope Adesanya",
-    longitude: 3.4250,
-    latitude: 6.5180,
+    longitude: 3.3500,
+    latitude: 6.5350,
     status: "idle",
     routeHistory: [
-      [3.4180, 6.5120],
-      [3.4250, 6.5180],
+      [3.3440, 6.5290],
+      [3.3500, 6.5350],
     ],
   },
 
