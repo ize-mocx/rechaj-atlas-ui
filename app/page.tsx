@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useCallback, useState } from "react"
+import { useRef, useCallback, useState, useEffect } from "react"
 import mapboxgl from "mapbox-gl"
 import { Map, type MapHandle, type MapMarker } from "@/components/ui/map"
 import { SidebarPanel, type SelectedLocation } from "@/components/sidebar-panel"
@@ -200,6 +200,21 @@ export default function Page() {
   const handleCloseDetail = useCallback(() => {
     setSelectedLocation(null)
   }, [])
+
+  useEffect(() => {
+    function onSearchNavigate(e: Event) {
+      const { id, type } = (e as CustomEvent).detail
+      if (type === "rider") {
+        const rider = riders.find((r) => r.id === id)
+        if (rider) handleRiderClick(rider)
+      } else {
+        const marker = stationMarkers.find((m) => m.id === id)
+        if (marker) handleMarkerClick(marker)
+      }
+    }
+    window.addEventListener("search-navigate", onSearchNavigate)
+    return () => window.removeEventListener("search-navigate", onSearchNavigate)
+  }, [handleMarkerClick, handleRiderClick])
 
   return (
     <div className="flex h-full w-full">
