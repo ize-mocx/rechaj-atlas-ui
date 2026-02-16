@@ -1,6 +1,5 @@
 import {
   IconBell,
-  IconCompass,
   IconLogout,
   IconSettings,
   IconUser,
@@ -13,13 +12,14 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Separator } from "./ui/separator";
+import { Badge } from "./ui/badge";
 
 function Header() {
   return (
     <header className="flex h-12 items-center justify-between border-b border-border bg-background px-4">
       <div className="flex items-center gap-2">
-        <IconCompass className="size-5 text-primary" />
-        <span className="text-sm font-semibold">Rechaj Atlas</span>
+        <img src="/logo.svg" alt="Rechaj Atlas" className="w-20" />
+        <Badge className="text-sm font-medium">Atlas</Badge>
       </div>
       <div className="flex items-center gap-5">
         <div className="flex items-center gap-1.5">
