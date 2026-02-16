@@ -230,9 +230,15 @@ const Map = forwardRef<MapHandle, MapProps>(function Map({
       el.style.width = "20px";
       el.style.height = "20px";
       el.style.borderRadius = "50%";
-      el.style.backgroundColor = "#3498db";
+      const color =
+        rider.status === "inactive"
+          ? "#9ca3af"
+          : rider.status === "technical-issue"
+            ? "#ef4444"
+            : "#3498db";
+      el.style.backgroundColor = color;
       el.style.border = "3px solid white";
-      el.style.boxShadow = "0 0 0 2px #3498db, 0 2px 6px rgba(0,0,0,0.3)";
+      el.style.boxShadow = `0 0 0 2px ${color}, 0 2px 6px rgba(0,0,0,0.3)`;
       el.style.cursor = "pointer";
 
       const popupNode = document.createElement("div");
