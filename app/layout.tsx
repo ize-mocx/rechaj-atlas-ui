@@ -10,8 +10,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rechaj stations",
-  description: "Rechaj stations management",
+  title: "Rechaj Atlas",
+  description: "Rechaj Atlas",
 };
 
 export default function RootLayout({
